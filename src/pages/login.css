@@ -1,0 +1,130 @@
+.loginContainer {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #CFD9FB;
+}
+
+.formContainer {
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 60px;
+    background-color: #3D4EAC;
+    border-radius: 15px;
+}
+
+.formTitle {
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+.formContainer form {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.formContainer form input {
+    width: 100%;
+    height: 35px;
+    border-radius: 5px;
+    background-color: #3747db38;
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+    border-radius: 5px;
+    padding-left: 15px;
+    border: 1px solid #ccc;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+}
+
+.formContainer form input::placeholder {
+    color: #fff;
+}
+
+.formContainer form input:focus {
+    outline: none;
+}
+
+.formContainer form p {
+    color: #fff;
+    margin-top: -10px;
+    font-size: 14px;
+}
+
+.formContainer form p a {
+    color: #ffc107;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btnContainer {
+    text-align: center;
+}
+
+.btn-my {
+    display: inline-block;
+    border: 1px solid #fff;
+    color: #fff;
+    background-color: #3748DB;
+    padding: 8px 30px;
+    font-weight: bold;
+    border-radius: 15px;
+}
+
+.btn-my>i {
+    font-size: 20px;
+    animation: spin .8s ease infinite;
+}
+
+.btn {
+    display: inline-block;
+    border: 1px solid #fff;
+    color: #fff;
+    background-color: #3748DB;
+    padding: 8px 30px;
+    font-weight: bold;
+    border-radius: 15px;
+    cursor: pointer;
+
+
+}
+
+.btnedit {
+    display: inline-block;
+    border: 1px solid #fff;
+    color: #fff;
+    background-color: #1fb402;
+    padding: 5px 20px;
+    font-weight: bold;
+    border-radius: 15px;
+    cursor: pointer;
+
+
+}
+
+.btndelete {
+    display: inline-block;
+    border: 1px solid #fff;
+    color: #fff;
+    background-color: #b40202;
+    margin-left: 5px;
+    padding: 5px 20px;
+    font-weight: bold;
+    border-radius: 15px;
+    cursor: pointer;
+
+}
+
+.btn:disabled,
+.btn[disabled] {
+    border: 1px solid #999999;
+    background-color: #cccccc;
+    color: #666666;
+}
