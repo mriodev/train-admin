@@ -3,6 +3,7 @@ import { db } from '../firebase';
 import { useNavigate, useParams } from "react-router-dom"
 import '../components/addTrain.css';
 import { getDoc, updateDoc, doc } from "firebase/firestore";
+import { toast } from 'react-toastify';
 
 
 import NavBar from '../components/NavBar';
