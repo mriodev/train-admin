@@ -1,23 +1,36 @@
 import React from 'react'
+import { useContext } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import './navbar.css';
 import styled from "styled-components";
 import RegisterPage from '../pages/Register';
+import { getAuth, signOut } from 'firebase/auth';
+import { AuthContext } from '../context/authContext';
 
 export default function NavBar() {
 
   const navigate = useNavigate();
-
+  const { auth: { user }, dispatch } = useContext(AuthContext);
+  
   const handleLogout = () => {
+    
+    const auth = getAuth();
+
     // logout current user
-    localStorage.removeItem('loggedInUser');
+    signOut(auth).then( ()=>{
 
-    toast.success('Logout Success');
+        dispatch({ type: 'LOGOUT_SUCCESS', payload: null });
 
-    // redirect to login page
-    navigate('/login');
-
+        localStorage.removeItem('loggedInUser');
+        toast.success('Logout Success');
+        
+        // redirect to login page
+        navigate('/login');
+      }
+    ).catch((error)=>{
+      toast.success('Logout Faild!');
+    });
   }
 
   return (

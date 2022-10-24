@@ -52,7 +52,7 @@ const LoginPage = () => {
                     toast.success('Login Success as admin');
                 }
                 setLoading(false);
-                navigate('/');
+                navigate('/login');
             })
             .catch(err => {
                 toast.error('Login failed, please try again');
@@ -61,9 +61,9 @@ const LoginPage = () => {
 
 
     }
-
+    
     return (
-
+        
         user && user.isAdmin ? (<Navigate to='/' />) :
 
             <div className="loginContainer">
